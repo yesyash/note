@@ -13,7 +13,6 @@ export default tseslint.config(
       'node_modules/**',
       'src/routeTree.gen.ts', // generated file
       'eslint.config.mjs',
-      'src/reportWebVitals.ts', // temporarily skipped per request
     ],
   },
   // Project rules
