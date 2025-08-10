@@ -1,1 +1,6 @@
 @import 'tailwindcss';
+
+* {
+  background-color: #010101;
+  @apply text-neutral-50
+}
