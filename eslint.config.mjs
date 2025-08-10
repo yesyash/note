@@ -2,7 +2,6 @@ import tseslint from 'typescript-eslint'
 import importX from 'eslint-plugin-import-x'
 import prettier from 'eslint-config-prettier'
 
-// Flat config for TypeScript (ESM) with import sorting & unused import cleanup
 export default tseslint.config(
   // Type-aware recommended rules from typescript-eslint v8
   ...tseslint.configs.recommendedTypeChecked,
@@ -35,15 +34,14 @@ export default tseslint.config(
       },
     },
     rules: {
-      // Import ordering (default grouping/order per requirement)
-      'import-x/order': 'warn',
+      'import-x/order': 'error',
       // TypeScript-specific hygiene
       '@typescript-eslint/no-unused-vars': [
-        'warn',
+        'error',
         { argsIgnorePattern: '^_', varsIgnorePattern: '^_', ignoreRestSiblings: true },
       ],
       '@typescript-eslint/consistent-type-imports': [
-        'warn',
+        'error',
         { prefer: 'type-imports', fixStyle: 'separate-type-imports' },
       ],
     },
