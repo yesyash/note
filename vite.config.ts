@@ -1,15 +1,15 @@
+import { resolve } from 'node:path'
 import { defineConfig } from 'vite'
 import viteReact from '@vitejs/plugin-react'
 import tanstackRouter from '@tanstack/router-plugin/vite'
-import { resolve } from 'node:path'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [
-    tanstackRouter({ autoCodeSplitting: true }), 
-    viteReact(), 
-  // @ts-ignore
-  tailwindcss()
+    tanstackRouter({ autoCodeSplitting: true }),
+    viteReact(),
+    // @ts-expect-error - tailwindcss() plugin typing not yet provided by types
+    tailwindcss(),
   ],
   test: {
     globals: true,

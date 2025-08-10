@@ -1,0 +1,8 @@
+# Build & deps
+node_modules
+.dist
+dist
+coverage
+
+# Generated
+src/routeTree.gen.ts
